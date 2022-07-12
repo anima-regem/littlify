@@ -1,0 +1,23 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block page_name %}
+Dashboard
+{% endblock %}
+
+{% block contents %}
+<div class="container column is-centered box m-2">
+        {% for data in urls %}
+        <div class="box m-3 is-centered-box">
+            <a href={{"../"+data.short}}>Short : {{data.short}}</p>
+            <a href={{"http://"+data.url}}>{{data.url}}</a>
+        </div>
+        
+        {% endfor %}
+        <a class="button is-outlined is-danger is-light is-rounded" href={{url_for('auth.logout')}}>Log Out</a>
+    </div>
+
+{% endblock %}

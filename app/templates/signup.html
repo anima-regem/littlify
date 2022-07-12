@@ -1,0 +1,43 @@
+{% extends "base.html" %} {% block title %} Signup - Littlify {% endblock %} {%
+block page_name%}
+<h3 class="subtitle">Sign Up</h3>
+{% endblock %} {%block contents %}
+<div class="container column is-full is-centered box">
+  <form autocomplete="off" method="post">
+    <div class="field m-4 control">
+      <p class="control has-icons-left">
+        <input
+          autocomplete="false"
+          class="input is-rounded is-primary"
+          type="text"
+          placeholder="Email"
+          name="email"
+        />
+        <span class="icon is-small is-left">
+          <i class="fa-solid fa-at"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field m-4 control">
+      <p class="control has-icons-left">
+        <input
+          autocomplete="false"
+          class="input is-rounded is-primary"
+          type="password"
+          placeholder="Password"
+          name="password"
+        />
+        <span class="icon is-small is-left">
+          <i class="fa-solid fa-key"></i>
+        </span>
+      </p>
+    </div>
+    <div class="container column is-one-fifths is-centered">
+      <p class="m-3">Already a member? <a href="/login/">Log In</a></p>
+      <button type="submit" class="button is-rounded is-outlined is-primary">
+        Sign Up
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %} 
